@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,18 +10,18 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #ffffff;
+            background: #ffffff;
             line-height: 1.6;
         }
 
         header {
-            background-color: #0a4091;
-            padding: 20px 0;
+            background: #0a4091;
+            padding: 25px 10px;
             text-align: center;
             color: white;
         }
 
-        header h2 {
+        header h1 {
             margin: 0;
         }
 
@@ -30,9 +31,23 @@
             margin: auto;
         }
 
+        .profile-image {
+            text-align: center;
+            background: white;
+            margin: 40px 0;
+        }
+
+        .profile-image img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #d4af37;
+        }
+
         .hero {
             background: white;
-            padding: 7px 2px;
+            padding: 15px 10px;
             text-align: center;
         }
 
@@ -42,39 +57,8 @@
             margin-bottom: 15px;
         }
 
-        .hero p {
-            font-size: 18px;
+        .hero h3 {
             color: #555;
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 14px 35px;
-            background-color: #25D366;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-
-           font-size: 20px !important;
-           
-        }
-.profile-image {
-    text-align: center;
-background: #ffffff;
-    margin: 40px 0;
-}
-
-.profile-image img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #d4af37;
-}
-
-        .btn:hover {
-            background-color: #b8962e;
         }
 
         .about {
@@ -85,56 +69,69 @@ background: #ffffff;
 
         .about h2 {
             color: #0f2b46;
-            margin-bottom: 20px;
         }
 
         .services {
-    padding: 60px 20px;
-    background: #eef2f7;
-    text-align: center;
-}
+            padding: 60px 20px;
+            background: #eef2f7;
+            text-align: center;
+        }
 
-.services h2 {
-    color: #0f2b46;
-    margin-bottom: 40px;
-}
+        .services h2 {
+            color: #0f2b46;
+            margin-bottom: 40px;
+        }
 
-.services-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
+        .services-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
 
-.service-card {
-    background: white;
-    width: 250px;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: 0.3s;
-}
+        .service-card {
+            background: white;
+            width: 250px;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
 
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-}
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+        }
 
-.service-card h3 {
-    color: #0f2b46;
-    margin-bottom: 15px;
-}
+        .service-card h3 {
+            color: #0f2b46;
+        }
 
-.service-card p {
-    color: #555;
-    font-size: 14px;
-}
+        .service-card p {
+            color: #555;
+            font-size: 14px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 14px 25px;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .btn:hover {
+            background: #b8962e;
+        }
 
         footer {
-            background-color: #0a4091;
+            background: #0a4091;
             color: white;
             text-align: center;
-            padding: 100px;
+            padding: 50px 15px;
             margin-top: 40px;
         }
 
@@ -143,6 +140,15 @@ background: #ffffff;
                 font-size: 26px;
             }
 
+            .profile-image img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .btn {
+                font-size: 16px;
+                padding: 12px 18px;
+            }
         }
     </style>
 </head>
@@ -151,27 +157,31 @@ background: #ffffff;
 
 <header>
     <div class="container">
-        <h1> Finastra - Your Trusted Partner in Accounting & Tax Compliance</h1>
-        <p><b>GST • Income Tax • Payroll • Compliance Services</p>
-       
-
+        <h1>Finastra - Your Trusted Partner in Accounting & Tax Compliance</h1>
+        <p><b>GST • Income Tax • Payroll • Compliance Services</b></p>
     </div>
 </header>
-</section>
+
 <section class="profile-image">
- <div class="container"> 
-<img src="https://raw.githubusercontent.com/badalsharma0180-droid/Finastra/677c0b75a33fd06ee9fe5b16e6da82df26a1aa50/Badal.png" alt="Profile Image">
-</section>
-<section class="hero">
-<div class="container">
-        <h1>Badal Sharma - Accounting, GST & Tax Services</h1>
-	<h3> 8+ Years of experience | Proffesional Financial Support</h3>
-	<h3> Area of Service Delhi NCR </h3>
+    <div class="container">
+        <img
+            src="https://raw.githubusercontent.com/badalsharma0180-droid/Finastra/677c0b75a33fd06ee9fe5b16e6da82df26a1aa50/Badal.png"
+            alt="Badal Sharma Profile Image">
     </div>
- <section class="about">
-    <div class="container"> 
+</section>
+
+<section class="hero">
+    <div class="container">
+        <h1>Badal Sharma - Accounting, GST & Tax Services</h1>
+        <h3>8+ Years of Experience | Professional Financial Support</h3>
+        <h3>Area of Service: Delhi NCR</h3>
+    </div>
+</section>
+
+<section class="about">
+    <div class="container">
         <h1>More About Me</h1>
-        <p><h3>
+        <p>
             Badal Sharma is a Senior Accountant and Financial Consultant with over 8 years of experience in accounting, taxation, compliance, and financial management. He specializes in financial reporting, GST, budgeting, cash flow planning, and business advisory for startups and SMEs. With strong expertise in Excel and accounting systems, he delivers accurate, transparent, and growth-focused financial solutions tailored to client needs.
         </p>
     </div>
@@ -182,6 +192,7 @@ background: #ffffff;
         <h1>Our Services</h1>
 
         <div class="services-grid">
+
             <div class="service-card">
                 <h3>GST Registration & Filing</h3>
                 <p>Complete GST compliance including registration, return filing and advisory.</p>
@@ -201,21 +212,34 @@ background: #ffffff;
                 <h3>Business Compliance</h3>
                 <p>ROC filings, documentation, and ongoing compliance assistance.</p>
             </div>
-<div class="service-card">
+
+            <div class="service-card">
                 <h3>PF Management</h3>
-                <p>Assit in Management,Transactions and Withdrawals, from your UAN </p>
+                <p>Assistance with UAN management, transactions and withdrawals.</p>
             </div>
+
         </div>
     </div>
 </section>
 
 <footer>
-    <a href="tel:+919871860180" class="btn">📞Schedule a Free Consultation</a>
-	<a href="https://api.whatsapp.com/send/?phone=919871860180&text&type=phone_number&app_absent=0" class="btn">💬Chat on Whatsapp </a>
-	<a href="mailto:badalsharma0180@gmail.com" class="btn">📧Drop a Mail </a> 
-<h3>© 2026 Badal Sharma | All Rights Reserved
+
+    <a href="tel:+919871860180" class="btn">
+        📞 Schedule a Free Consultation
+    </a>
+
+    <a href="https://api.whatsapp.com/send/?phone=919871860180" class="btn">
+        💬 Chat on WhatsApp
+    </a>
+
+    <a href="mailto:badalsharma0180@gmail.com" class="btn">
+        📧 Drop a Mail
+    </a>
+
+    <h3>© 2026 Badal Sharma | All Rights Reserved</h3>
+
 </footer>
 
 </body>
 </html>
-
+```
