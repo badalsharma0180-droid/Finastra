@@ -1,1237 +1,469 @@
 ```html
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>FINASTRA | Badal Sharma | Accounting & Financial Consultant</title>
-<meta name="description" content="FINASTRA offers professional accounting, bookkeeping, GST, TDS, payroll and financial reporting services in Delhi NCR.">
+<meta name="description" content="FINASTRA provides accounting, bookkeeping, GST, TDS, payroll and financial reporting services in Delhi NCR.">
 <meta name="theme-color" content="#102b49">
 
 <style>
 :root {
-    --navy: #102b49;
-    --blue: #1d4e80;
-    --gold: #d6ad62;
-    --green: #159b69;
-    --light: #f4f7fb;
-    --text: #34445a;
-    --muted: #718096;
-    --white: #ffffff;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html { scroll-behavior: smooth; }
-
-body {
-    font-family: Arial, sans-serif;
-    color: var(--text);
-    line-height: 1.7;
-    background: var(--white);
-}
-
-.container {
-    width: 90%;
-    max-width: 1180px;
-    margin: auto;
-}
-
-section { scroll-margin-top: 85px; }
-
-/* NAVIGATION */
-
-header {
-    background: var(--navy);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 3px 15px rgba(0,0,0,.12);
-}
-
-.nav {
-    min-height: 75px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
-.logo {
-    color: white;
-    font-size: 29px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-.logo span { color: var(--gold); }
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 23px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
-}
-
-nav a:hover { color: var(--gold); }
-
-.nav-cta {
-    background: var(--gold);
-    color: var(--navy);
-    padding: 9px 15px;
-    border-radius: 5px;
-}
-
-/* HERO */
-
-.hero {
-    background: linear-gradient(120deg, #0b2039, #1b4c7b);
-    color: white;
-    padding: 85px 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    border: 1px solid rgba(255,255,255,.08);
-    border-radius: 50%;
-    right: -100px;
-    top: -160px;
-}
-
-.hero-content {
-    display: grid;
-    grid-template-columns: 1.4fr .8fr;
-    align-items: center;
-    gap: 65px;
-    position: relative;
-}
-
-.tag {
-    color: var(--gold);
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 3px;
-}
-
-.hero h1 {
-    font-size: clamp(34px, 5vw, 54px);
-    line-height: 1.2;
-    margin: 18px 0;
-}
-
-.hero h1 span { color: var(--gold); }
-
-.hero-description {
-    color: #dce6f1;
-    font-size: 17px;
-    max-width: 600px;
-    margin-bottom: 25px;
-}
-
-.hero-points {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 17px;
-    margin: 22px 0;
-    font-size: 13px;
-    color: #e6edf5;
-}
-
-.profile-box {
-    text-align: center;
-    background: rgba(255,255,255,.08);
-    border: 1px solid rgba(255,255,255,.16);
-    padding: 32px 20px;
-    border-radius: 18px;
-    backdrop-filter: blur(8px);
-}
-
-.profile-box img {
-    width: 230px;
-    height: 230px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid var(--gold);
-    box-shadow: 0 12px 35px rgba(0,0,0,.3);
-}
-
-.profile-box h2 {
-    margin-top: 17px;
-    font-size: 25px;
-}
-
-.profile-box p {
-    color: #dce6f1;
-    font-size: 13px;
-}
-
-/* BUTTONS */
-
-.btn {
-    display: inline-block;
-    text-decoration: none;
-    padding: 13px 22px;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: bold;
-    margin: 5px 5px 5px 0;
-    transition: .25s;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-}
-
-.btn-gold {
-    background: var(--gold);
-    color: var(--navy);
-}
-
-.btn-green {
-    background: var(--green);
-    color: white;
-}
-
-.btn-outline {
-    border: 1px solid rgba(255,255,255,.5);
-    color: white;
-}
-
-/* GENERAL SECTION */
-
-.section {
-    padding: 78px 0;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 43px;
-}
-
-.section-title .eyebrow {
-    color: #b68c40;
-    font-size: 12px;
-    letter-spacing: 2px;
-    font-weight: bold;
-}
-
-.section-title h2 {
-    color: var(--navy);
-    font-size: 33px;
-    margin: 8px 0;
-}
-
-.section-title p {
-    color: var(--muted);
-    font-size: 15px;
-}
-
-/* ABOUT */
-
-.about-card {
-    background: white;
-    border: 1px solid #e5eaf1;
-    padding: 40px;
-    border-radius: 14px;
-    box-shadow: 0 8px 30px rgba(15,43,73,.05);
-}
-
-.about-card h3 {
-    color: var(--blue);
-    font-size: 23px;
-    margin-bottom: 15px;
-}
-
-.about-card p { color: #59687c; }
-
-.stats {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 18px;
-    margin-top: 30px;
-}
-
-.stat {
-    background: var(--light);
-    padding: 20px 12px;
-    border-radius: 9px;
-    text-align: center;
-}
-
-.stat h3 {
-    color: var(--blue);
-    font-size: 26px;
-}
-
-.stat p {
-    font-size: 13px;
-}
-
-/* SERVICES */
-
-.services-section { background: var(--light); }
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 22px;
-}
-
-.service-card {
-    background: white;
-    padding: 27px;
-    border-radius: 12px;
-    border: 1px solid #e8edf3;
-    transition: .3s;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(16,43,73,.08);
-    border-color: var(--gold);
-}
-
-.service-icon {
-    width: 48px;
-    height: 48px;
-    display: grid;
-    place-items: center;
-    background: #f8f1e4;
-    color: var(--blue);
-    font-size: 23px;
-    border-radius: 10px;
-    margin-bottom: 17px;
-}
-
-.service-card h3 {
-    color: var(--navy);
-    font-size: 18px;
-    margin-bottom: 9px;
-}
-
-.service-card p {
-    color: var(--muted);
-    font-size: 13px;
-}
-
-/* INDUSTRIES */
-
-.industries {
-    background: var(--navy);
-    color: white;
-}
-
-.industries .section-title h2 { color: white; }
-.industries .section-title p { color: #c7d3e1; }
-
-.industry-grid {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 18px;
-}
-
-.industry {
-    border: 1px solid rgba(255,255,255,.18);
-    background: rgba(255,255,255,.06);
-    border-radius: 10px;
-    text-align: center;
-    padding: 25px 12px;
-}
-
-.industry span {
-    font-size: 30px;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.industry h3 { font-size: 15px; }
-
-/* WHY CHOOSE US */
-
-.why-grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 25px;
-}
-
-.why-item {
-    padding: 15px;
-    border-left: 3px solid var(--gold);
-}
-
-.why-item h3 {
-    color: var(--navy);
-    font-size: 17px;
-    margin-bottom: 7px;
-}
-
-.why-item p {
-    color: var(--muted);
-    font-size: 13px;
-}
-
-/* PRICING */
-
-.pricing-section { background: #f4f7fb; }
-
-.packages {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 23px;
-    align-items: stretch;
-}
-
-.package {
-    background: white;
-    border: 1px solid #e0e7ef;
-    border-radius: 14px;
-    padding: 30px 24px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 6px 22px rgba(0,0,0,.04);
-    transition: .3s;
-}
-
-.package:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0,0,0,.09);
-}
-
-.package.featured {
-    border: 2px solid var(--gold);
-}
-
-.popular {
-    background: var(--gold);
-    color: var(--navy);
-    border-radius: 20px;
-    display: inline-block;
-    padding: 5px 12px;
-    font-size: 10px;
-    font-weight: bold;
-    align-self: flex-start;
-    margin-bottom: 12px;
-}
-
-.package h3 {
-    color: var(--navy);
-    font-size: 24px;
-}
-
-.package .subtitle {
-    color: var(--muted);
-    font-size: 13px;
-    margin: 4px 0 15px;
-}
-
-.price {
-    color: var(--blue);
-    font-size: 34px;
-    font-weight: 800;
-}
-
-.price small {
-    font-size: 12px;
-    font-weight: normal;
-    color: var(--muted);
-}
-
-.package hr {
-    border: none;
-    border-top: 1px solid #e9edf2;
-    margin: 18px 0;
-}
-
-.package ul {
-    list-style: none;
-    flex: 1;
-}
-
-.package li {
-    font-size: 13px;
-    padding: 8px 0;
-    border-bottom: 1px solid #f0f2f5;
-}
-
-.package li::before {
-    content: "✓ ";
-    color: var(--green);
-    font-weight: bold;
-}
-
-.package .btn {
-    text-align: center;
-    margin-top: 23px;
-}
-
-/* RATE LIST */
-
-.rate-section { background: white; }
-
-.table-wrap {
-    overflow-x: auto;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,.05);
-}
-
-.rate-table {
-    width: 100%;
-    min-width: 400px;
-    border-collapse: collapse;
-    background: white;
-}
-
-.rate-table th {
-    background: var(--navy);
-    color: white;
-    padding: 17px;
-    text-align: left;
-    font-size: 14px;
-}
-
-.rate-table td {
-    padding: 15px 17px;
-    border-bottom: 1px solid #edf0f4;
-    font-size: 14px;
-}
-
-.rate-table tr:last-child td { border-bottom: none; }
-
-.rate-table td:last-child {
-    color: var(--blue);
-    font-weight: bold;
-    white-space: nowrap;
-}
-
-.note {
-    background: #fff8e9;
-    border-left: 4px solid var(--gold);
-    padding: 18px;
-    margin-top: 22px;
-    border-radius: 5px;
-    font-size: 13px;
-    color: #665d4b;
-}
-
-/* PROCESS */
-
-.process-section { background: var(--light); }
-
-.process-grid {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px;
-}
-
-.process {
-    background: white;
-    padding: 24px 15px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.process-number {
-    background: var(--navy);
-    color: var(--gold);
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    margin: 0 auto 14px;
-    font-weight: bold;
-}
-
-.process h3 {
-    color: var(--navy);
-    font-size: 16px;
-}
-
-.process p {
-    color: var(--muted);
-    font-size: 12px;
-    margin-top: 7px;
-}
-
-/* CONTACT */
-
-.contact {
-    background: linear-gradient(120deg,#102b49,#1d4e80);
-    color: white;
-    text-align: center;
-    padding: 75px 15px;
-}
-
-.contact h2 {
-    font-size: 34px;
-    margin-bottom: 10px;
-}
-
-.contact p {
-    color: #dbe5f0;
-    margin-bottom: 14px;
-}
-
-.contact-details {
-    margin: 20px 0;
-    font-size: 14px;
-    line-height: 2.2;
-}
-
-footer {
-    background: #091a2e;
-    color: white;
-    text-align: center;
-    padding: 30px 12px;
-}
-
-footer .logo { font-size: 25px; }
-footer p { font-size: 12px; color: #c5d0df; }
-
-/* FLOATING WHATSAPP */
-
-.whatsapp-float {
-    position: fixed;
-    bottom: 22px;
-    right: 20px;
-    z-index: 999;
-    background: #20b76b;
-    color: white;
-    padding: 13px 19px;
-    border-radius: 35px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    box-shadow: 0 5px 18px rgba(0,0,0,.2);
-}
-
-/* MOBILE */
-
-@media(max-width:900px) {
-    nav { gap: 12px; }
-    nav a { font-size: 12px; }
-    .hero-content { gap: 30px; }
-    .grid, .packages, .why-grid { grid-template-columns: repeat(2,1fr); }
-    .industry-grid { grid-template-columns: repeat(2,1fr); }
-    .process-grid { grid-template-columns: repeat(2,1fr); }
-}
-
-@media(max-width:600px) {
-    .nav {
-        padding: 12px 0;
-        flex-direction: column;
-    }
-
-    nav {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px 16px;
-    }
-
-    .nav-cta { padding: 7px 10px; }
-
-    .hero { padding: 48px 0; }
-
-    .hero-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .hero h1 { font-size: 34px; }
-
-    .hero-points { justify-content: center; }
-
-    .profile-box {
-        max-width: 330px;
-        margin: auto;
-        width: 100%;
-    }
-
-    .profile-box img {
-        width: 200px;
-        height: 200px;
-    }
-
-    .section { padding: 52px 0; }
-
-    .section-title h2 { font-size: 27px; }
-
-    .grid, .packages, .why-grid,
-    .stats, .industry-grid, .process-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-card { padding: 24px; }
-
-    .contact h2 { font-size: 27px; }
-
-    .whatsapp-float {
-        right: 12px;
-        bottom: 12px;
-    }
+--navy:#102b49;
+--blue:#1d4e80;
+--gold:#d6ad62;
+--green:#159b69;
+--light:#f4f7fb;
+--text:#34445a;
+--muted:#718096;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;color:var(--text);line-height:1.7}
+.container{width:90%;max-width:1180px;margin:auto}
+section{scroll-margin-top:90px}
+header{background:var(--navy);position:sticky;top:0;z-index:1000;box-shadow:0 3px 15px #0002}
+.nav{min-height:75px;display:flex;justify-content:space-between;align-items:center;gap:15px}
+.logo{color:white;font-size:29px;font-weight:800;letter-spacing:2px}
+.logo span{color:var(--gold)}
+nav{display:flex;align-items:center;gap:17px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-size:12px;font-weight:bold}
+nav a:hover{color:var(--gold)}
+.nav-cta{background:var(--gold);color:var(--navy);padding:8px 12px;border-radius:5px}
+.hero{background:linear-gradient(120deg,#0b2039,#1b4c7b);color:white;padding:80px 0}
+.hero-content{display:grid;grid-template-columns:1.4fr .8fr;align-items:center;gap:55px}
+.tag,.eyebrow{color:var(--gold);font-size:12px;font-weight:bold;letter-spacing:2px}
+.hero h1{font-size:clamp(34px,5vw,54px);line-height:1.2;margin:18px 0}
+.hero h1 span{color:var(--gold)}
+.hero-description{color:#dce6f1;font-size:17px;max-width:600px;margin-bottom:20px}
+.hero-points{display:flex;flex-wrap:wrap;gap:16px;margin:22px 0;font-size:13px}
+.profile-box{text-align:center;background:#ffffff14;border:1px solid #ffffff30;padding:30px 20px;border-radius:18px}
+.profile-box img{width:220px;height:220px;object-fit:cover;border-radius:50%;border:5px solid var(--gold)}
+.profile-box h2{margin-top:15px}
+.profile-box p{font-size:13px;color:#dce6f1}
+.btn{display:inline-block;text-decoration:none;padding:12px 20px;border-radius:6px;font-size:13px;font-weight:bold;margin:5px 5px 5px 0;transition:.2s}
+.btn:hover{transform:translateY(-3px)}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-green{background:var(--green);color:white}
+.btn-outline{border:1px solid #ffffff80;color:white}
+.section{padding:75px 0}
+.section-title{text-align:center;margin-bottom:40px}
+.section-title h2{color:var(--navy);font-size:32px;margin:8px 0}
+.section-title p{color:var(--muted);font-size:14px}
+.about-card{background:white;border:1px solid #e5eaf1;padding:35px;border-radius:14px;box-shadow:0 8px 30px #102b490d}
+.about-card h3{color:var(--blue);font-size:23px;margin-bottom:12px}
+.about-card p{color:#59687c}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:25px}
+.stat{background:var(--light);padding:18px;text-align:center;border-radius:9px}
+.stat h3{color:var(--blue);font-size:25px}
+.stat p{font-size:13px}
+.services-section,.pricing-section,.portfolio-section,.process-section{background:var(--light)}
+.grid,.packages,.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.service-card,.package,.portfolio-card{background:white;padding:25px;border-radius:12px;border:1px solid #e5eaf1;transition:.3s}
+.service-card:hover,.package:hover,.portfolio-card:hover{transform:translateY(-5px);box-shadow:0 12px 25px #102b4912}
+.service-icon{font-size:27px;margin-bottom:12px}
+.service-card h3,.portfolio-card h3{color:var(--navy);font-size:18px;margin-bottom:8px}
+.service-card p,.portfolio-card p{color:var(--muted);font-size:13px}
+.industries{background:var(--navy);color:white}
+.industries .section-title h2{color:white}
+.industries .section-title p{color:#c7d3e1}
+.industry-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.industry{text-align:center;padding:23px;border:1px solid #ffffff30;border-radius:10px;background:#ffffff0c}
+.industry span{font-size:30px}
+.industry h3{font-size:14px;margin-top:8px}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.why-item{padding:15px;border-left:3px solid var(--gold)}
+.why-item h3{color:var(--navy);font-size:17px}
+.why-item p{color:var(--muted);font-size:13px}
+.package{padding:28px 23px;display:flex;flex-direction:column}
+.package.featured{border:2px solid var(--gold)}
+.popular{background:var(--gold);color:var(--navy);padding:5px 12px;border-radius:20px;font-size:10px;font-weight:bold;align-self:flex-start;margin-bottom:10px}
+.package h3{color:var(--navy);font-size:24px}
+.subtitle{color:var(--muted);font-size:13px}
+.price{color:var(--blue);font-size:32px;font-weight:800;margin:12px 0}
+.price small{font-size:11px;font-weight:normal;color:var(--muted)}
+.package hr{border:0;border-top:1px solid #e9edf2;margin:12px 0}
+.package ul{list-style:none;flex:1}
+.package li{font-size:13px;padding:8px 0;border-bottom:1px solid #f0f2f5}
+.package li:before{content:"✓ ";color:var(--green);font-weight:bold}
+.package .btn{text-align:center;margin-top:20px}
+.table-wrap{overflow-x:auto;border-radius:10px;box-shadow:0 5px 20px #0000000d}
+.rate-table{width:100%;min-width:400px;border-collapse:collapse;background:white}
+.rate-table th{background:var(--navy);color:white;padding:15px;text-align:left}
+.rate-table td{padding:14px;border-bottom:1px solid #edf0f4;font-size:14px}
+.rate-table td:last-child{color:var(--blue);font-weight:bold;white-space:nowrap}
+.note,.portfolio-note{background:#fff8e9;border-left:4px solid var(--gold);padding:16px;margin-top:22px;border-radius:5px;font-size:13px;color:#665d4b}
+.portfolio-icon{font-size:38px;margin-bottom:12px}
+.portfolio-card{display:flex;flex-direction:column}
+.portfolio-card details{margin-top:12px}
+.portfolio-card summary{color:var(--blue);font-weight:bold;font-size:13px;cursor:pointer;padding:10px 0}
+.portfolio-preview{overflow-x:auto;margin:10px 0}
+.portfolio-preview table{width:100%;border-collapse:collapse;font-size:12px}
+.portfolio-preview td{padding:8px 4px;border-bottom:1px solid #edf0f4}
+.portfolio-preview td:last-child{text-align:right;font-weight:bold;color:var(--blue);white-space:nowrap}
+.portfolio-download{display:block;text-align:center;background:var(--navy);color:white;padding:11px;border-radius:5px;text-decoration:none;font-size:13px;font-weight:bold;margin-top:auto}
+.portfolio-download:hover{background:var(--blue)}
+.portfolio-label{font-size:10px;color:var(--green);font-weight:bold;letter-spacing:1px;margin-bottom:8px}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.process{background:white;padding:23px 15px;text-align:center;border-radius:10px}
+.process-number{background:var(--navy);color:var(--gold);width:42px;height:42px;border-radius:50%;display:grid;place-items:center;margin:0 auto 12px;font-weight:bold}
+.process h3{color:var(--navy);font-size:15px}
+.process p{color:var(--muted);font-size:12px;margin-top:7px}
+.contact{background:linear-gradient(120deg,#102b49,#1d4e80);color:white;text-align:center;padding:70px 15px}
+.contact h2{font-size:32px;margin:10px 0}
+.contact p{color:#dbe5f0}
+.contact-details{margin:20px 0;font-size:14px;line-height:2.2}
+footer{background:#091a2e;color:white;text-align:center;padding:28px 12px}
+footer .logo{font-size:25px}
+footer p{font-size:12px;color:#c5d0df}
+.whatsapp-float{position:fixed;bottom:22px;right:20px;z-index:999;background:#20b76b;color:white;padding:13px 19px;border-radius:35px;text-decoration:none;font-weight:bold;font-size:14px;box-shadow:0 5px 18px #0003}
+@media(max-width:900px){
+.hero-content{gap:25px}
+.grid,.packages,.portfolio-grid,.why-grid{grid-template-columns:repeat(2,1fr)}
+.industry-grid,.process-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+.nav{padding:12px 0;flex-direction:column}
+nav{justify-content:center;gap:9px 13px}
+nav a{font-size:11px}
+.hero{padding:45px 0}
+.hero-content{grid-template-columns:1fr;text-align:center}
+.hero-points{justify-content:center}
+.profile-box{max-width:320px;margin:auto;width:100%}
+.profile-box img{width:190px;height:190px}
+.section{padding:50px 0}
+.section-title h2{font-size:26px}
+.grid,.packages,.portfolio-grid,.why-grid,.stats,.industry-grid,.process-grid{grid-template-columns:1fr}
+.about-card{padding:22px}
+.contact h2{font-size:26px}
+.whatsapp-float{right:12px;bottom:12px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
 <header>
 <div class="container nav">
-
-    <div class="logo">FINA<span>STRA</span></div>
-
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#industries">Clients</a>
-        <a href="#pricing">Packages</a>
-        <a href="#rates">Pricing</a>
-        <a href="#contact" class="nav-cta">Contact Us</a>
-    </nav>
-
+<div class="logo">FINA<span>STRA</span></div>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#industries">Clients</a>
+<a href="#portfolio">Our Work</a>
+<a href="#pricing">Packages</a>
+<a href="#rates">Pricing</a>
+<a href="#contact" class="nav-cta">Contact Us</a>
+</nav>
 </div>
 </header>
 
-<!-- PROFILE / HERO -->
 <section class="hero" id="home">
 <div class="container hero-content">
-
-    <div class="hero-text">
-        <div class="tag">ACCOUNTING • TAXATION • FINANCIAL SUPPORT</div>
-
-        <h1>
-            Smart Accounting.<br>
-            Better Business.<br>
-            <span>Stronger Financial Control.</span>
-        </h1>
-
-        <p class="hero-description">
-            Professional accounting, bookkeeping, GST, TDS,
-            payroll and financial reporting solutions for
-            businesses across Delhi NCR.
-        </p>
-
-        <div class="hero-points">
-            <span>✓ 8+ Years Experience</span>
-            <span>✓ Affordable Solutions</span>
-            <span>✓ Remote Support</span>
-        </div>
-
-        <a href="#pricing" class="btn btn-gold">Explore Packages</a>
-
-        <a href="https://api.whatsapp.com/send/?phone=919871860180&text=Hello%20FINASTRA%2C%20I%20want%20accounting%20services."
-           class="btn btn-green" target="_blank" rel="noopener">
-            WhatsApp Us
-        </a>
-    </div>
-
-    <div class="profile-box">
-        <img
-        src="https://raw.githubusercontent.com/badalsharma0180-droid/Finastra/677c0b75a33fd06ee9fe5b16e6da82df26a1aa50/Badal.png"
-        alt="Badal Sharma - FINASTRA"
-        loading="eager">
-
-        <h2>Badal Sharma</h2>
-        <p>Accounting & Financial Consultant</p>
-        <p>Delhi NCR, India</p>
-    </div>
-
+<div>
+<div class="tag">ACCOUNTING • TAXATION • FINANCIAL SUPPORT</div>
+<h1>Smart Accounting.<br>Better Business.<br><span>Stronger Financial Control.</span></h1>
+<p class="hero-description">Professional accounting, bookkeeping, GST, TDS, payroll and financial reporting solutions for businesses across Delhi NCR.</p>
+<div class="hero-points">
+<span>✓ 8+ Years Experience</span>
+<span>✓ Affordable Solutions</span>
+<span>✓ Remote Support</span>
+</div>
+<a href="#pricing" class="btn btn-gold">Explore Packages</a>
+<a href="https://api.whatsapp.com/send/?phone=919871860180&text=Hello%20FINASTRA%2C%20I%20want%20accounting%20services." class="btn btn-green" target="_blank" rel="noopener">WhatsApp Us</a>
+</div>
+<div class="profile-box">
+<img src="https://raw.githubusercontent.com/badalsharma0180-droid/Finastra/677c0b75a33fd06ee9fe5b16e6da82df26a1aa50/Badal.png" alt="Badal Sharma - FINASTRA">
+<h2>Badal Sharma</h2>
+<p>Accounting & Financial Consultant</p>
+<p>Delhi NCR, India</p>
+</div>
 </div>
 </section>
 
-<!-- ABOUT -->
 <section class="section" id="about">
 <div class="container">
-
-    <div class="section-title">
-        <span class="eyebrow">ABOUT THE FOUNDER</span>
-        <h2>Meet Badal Sharma</h2>
-        <p>Professional Experience. Practical Financial Solutions.</p>
-    </div>
-
-    <div class="about-card">
-        <h3>Welcome to FINASTRA</h3>
-
-        <p>
-            Badal Sharma is an accounting and financial professional
-            with over 8 years of experience in accounting, taxation,
-            compliance and financial management. He specializes in
-            bookkeeping, financial reporting, GST, TDS, payroll,
-            budgeting and cash flow management.
-
-            With practical experience in accounting systems,
-            Tally Prime and Microsoft Excel, he aims to provide
-            accurate, transparent and reliable financial support
-            to startups, small businesses and growing organisations.
-        </p>
-
-        <div class="stats">
-            <div class="stat">
-                <h3>8+</h3>
-                <p>Years Experience</p>
-            </div>
-
-            <div class="stat">
-                <h3>Delhi NCR</h3>
-                <p>Service Area</p>
-            </div>
-
-            <div class="stat">
-                <h3>SMEs</h3>
-                <p>Business Focus</p>
-            </div>
-        </div>
-    </div>
-
+<div class="section-title">
+<span class="eyebrow">ABOUT THE FOUNDER</span>
+<h2>Meet Badal Sharma</h2>
+<p>Professional Experience. Practical Financial Solutions.</p>
+</div>
+<div class="about-card">
+<h3>Welcome to FINASTRA</h3>
+<p>Badal Sharma is an accounting and financial professional with over 8 years of experience in accounting, taxation, compliance and financial management. He specializes in bookkeeping, financial reporting, GST, TDS, payroll, budgeting and cash flow management. With practical experience in accounting systems, Tally Prime and Microsoft Excel, he aims to provide accurate, transparent and reliable financial support to startups, small businesses and growing organisations.</p>
+<div class="stats">
+<div class="stat"><h3>8+</h3><p>Years Experience</p></div>
+<div class="stat"><h3>Delhi NCR</h3><p>Service Area</p></div>
+<div class="stat"><h3>SMEs</h3><p>Business Focus</p></div>
+</div>
+</div>
 </div>
 </section>
 
-<!-- SERVICES -->
 <section class="section services-section" id="services">
 <div class="container">
-
-    <div class="section-title">
-        <span class="eyebrow">WHAT WE DO</span>
-        <h2>Our Professional Services</h2>
-        <p>Complete Accounting & Financial Support for Your Business</p>
-    </div>
-
-    <div class="grid">
-
-        <div class="service-card">
-            <div class="service-icon">📊</div>
-            <h3>Accounting & Bookkeeping</h3>
-            <p>
-                Sales, purchase, expense booking, ledger maintenance,
-                bank reconciliation and monthly accounting.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="service-icon">📁</div>
-            <h3>GST Services</h3>
-            <p>
-                GST registration assistance, data preparation,
-                reconciliation and return filing coordination.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="service-icon">📑</div>
-            <h3>Income Tax Services</h3>
-            <p>
-                Income tax return preparation assistance and
-                documentation support for individuals and businesses.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="service-icon">👥</div>
-            <h3>Payroll Management</h3>
-            <p>
-                Salary processing, payroll reports, attendance
-                coordination and salary reconciliation.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="service-icon">🧾</div>
-            <h3>TDS & Compliance</h3>
-            <p>
-                TDS calculations, working, reconciliation and
-                compliance documentation assistance.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="service-icon">📈</div>
-            <h3>MIS & Financial Reporting</h3>
-            <p>
-                Monthly P&L reports, outstanding statements,
-                cash flow summaries and management reports.
-            </p>
-        </div>
-
-    </div>
+<div class="section-title">
+<span class="eyebrow">WHAT WE DO</span>
+<h2>Our Professional Services</h2>
+<p>Complete Accounting & Financial Support for Your Business</p>
+</div>
+<div class="grid">
+<div class="service-card"><div class="service-icon">📊</div><h3>Accounting & Bookkeeping</h3><p>Sales, purchase, expense booking, ledger maintenance, bank reconciliation and monthly accounting.</p></div>
+<div class="service-card"><div class="service-icon">📁</div><h3>GST Services</h3><p>GST registration assistance, data preparation, reconciliation and return filing coordination.</p></div>
+<div class="service-card"><div class="service-icon">📑</div><h3>Income Tax Services</h3><p>Income tax return preparation assistance and documentation support for individuals and businesses.</p></div>
+<div class="service-card"><div class="service-icon">👥</div><h3>Payroll Management</h3><p>Salary processing, payroll reports, attendance coordination and salary reconciliation.</p></div>
+<div class="service-card"><div class="service-icon">🧾</div><h3>TDS & Compliance</h3><p>TDS calculations, working, reconciliation and compliance documentation assistance.</p></div>
+<div class="service-card"><div class="service-icon">📈</div><h3>MIS & Financial Reporting</h3><p>Monthly P&L reports, outstanding statements, cash flow summaries and management reports.</p></div>
+</div>
 </div>
 </section>
 
-<!-- INDUSTRIES -->
 <section class="section industries" id="industries">
 <div class="container">
-
-    <div class="section-title">
-        <span class="eyebrow">OUR CLIENT SEGMENTS</span>
-        <h2>Who We Serve</h2>
-        <p>Accounting support designed for different business needs.</p>
-    </div>
-
-    <div class="industry-grid">
-
-        <div class="industry">
-            <span>🏢</span>
-            <h3>Small Businesses & SMEs</h3>
-        </div>
-
-        <div class="industry">
-            <span>🏫</span>
-            <h3>Schools & Daycares</h3>
-        </div>
-
-        <div class="industry">
-            <span>🏥</span>
-            <h3>Clinics & Healthcare</h3>
-        </div>
-
-        <div class="industry">
-            <span>🏠</span>
-            <h3>Real Estate Businesses</h3>
-        </div>
-
-    </div>
+<div class="section-title">
+<span class="eyebrow">OUR CLIENT SEGMENTS</span>
+<h2>Who We Serve</h2>
+<p>Accounting support designed for different business needs.</p>
+</div>
+<div class="industry-grid">
+<div class="industry"><span>🏢</span><h3>Small Businesses & SMEs</h3></div>
+<div class="industry"><span>🏫</span><h3>Schools & Daycares</h3></div>
+<div class="industry"><span>🏥</span><h3>Clinics & Healthcare</h3></div>
+<div class="industry"><span>🏠</span><h3>Real Estate Businesses</h3></div>
+</div>
 </div>
 </section>
 
-<!-- WHY CHOOSE US -->
 <section class="section">
 <div class="container">
-
-    <div class="section-title">
-        <span class="eyebrow">THE FINASTRA ADVANTAGE</span>
-        <h2>Why Choose FINASTRA?</h2>
-        <p>Reliable support to help you stay organised and informed.</p>
-    </div>
-
-    <div class="why-grid">
-
-        <div class="why-item">
-            <h3>Affordable Pricing</h3>
-            <p>Practical accounting solutions with transparent starting prices.</p>
-        </div>
-
-        <div class="why-item">
-            <h3>Experienced Support</h3>
-            <p>Accounting support backed by practical professional experience.</p>
-        </div>
-
-        <div class="why-item">
-            <h3>Accurate Records</h3>
-            <p>Organised accounting records and reconciliation support.</p>
-        </div>
-
-        <div class="why-item">
-            <h3>Monthly Reporting</h3>
-            <p>Useful financial summaries to help business owners track performance.</p>
-        </div>
-
-        <div class="why-item">
-            <h3>Remote Services</h3>
-            <p>Convenient online coordination and remote accounting support.</p>
-        </div>
-
-        <div class="why-item">
-            <h3>Confidentiality</h3>
-            <p>Responsible handling of business and financial information.</p>
-        </div>
-
-    </div>
+<div class="section-title">
+<span class="eyebrow">THE FINASTRA ADVANTAGE</span>
+<h2>Why Choose FINASTRA?</h2>
+<p>Reliable support to help you stay organised and informed.</p>
+</div>
+<div class="why-grid">
+<div class="why-item"><h3>Affordable Pricing</h3><p>Practical accounting solutions with transparent starting prices.</p></div>
+<div class="why-item"><h3>Experienced Support</h3><p>Accounting support backed by practical professional experience.</p></div>
+<div class="why-item"><h3>Accurate Records</h3><p>Organised accounting records and reconciliation support.</p></div>
+<div class="why-item"><h3>Monthly Reporting</h3><p>Useful financial summaries to help business owners track performance.</p></div>
+<div class="why-item"><h3>Remote Services</h3><p>Convenient online coordination and remote accounting support.</p></div>
+<div class="why-item"><h3>Confidentiality</h3><p>Responsible handling of business and financial information.</p></div>
+</div>
 </div>
 </section>
 
-<!-- PACKAGES -->
+<!-- FINASTRA WORK PORTFOLIO -->
+<section class="section portfolio-section" id="portfolio">
+<div class="container">
+<div class="section-title">
+<span class="eyebrow">OUR WORK PORTFOLIO</span>
+<h2>Explore Our Work Samples</h2>
+<p>Explore sample accounting reports and financial management formats prepared using Microsoft Excel.</p>
+</div>
+
+<div class="portfolio-grid">
+
+<div class="portfolio-card">
+<div class="portfolio-icon">📊</div>
+<div class="portfolio-label">EXCEL REPORT SAMPLE</div>
+<h3>Profit & Loss Statement</h3>
+<p>Professional P&L reporting covering sales, income, direct costs, gross profit, operating expenses and net profit.</p>
+<details>
+<summary>View Report Highlights ↓</summary>
+<div class="portfolio-preview">
+<table>
+<tr><td>Sales / Service Revenue</td><td>₹8,50,000</td></tr>
+<tr><td>Direct Costs</td><td>₹4,25,000</td></tr>
+<tr><td>Gross Profit</td><td>₹4,25,000</td></tr>
+<tr><td>Total Expenses</td><td>₹2,15,000</td></tr>
+<tr><td><strong>Net Profit</strong></td><td><strong>₹2,10,000</strong></td></tr>
+</table>
+</div>
+</details>
+<a class="portfolio-download" href="FINASTRA_Portfolio_Sample_Reports.xlsx" download>Download Excel Sample ↓</a>
+</div>
+
+<div class="portfolio-card">
+<div class="portfolio-icon">📑</div>
+<div class="portfolio-label">EXCEL REPORT SAMPLE</div>
+<h3>Balance Sheet</h3>
+<p>Structured reporting of current assets, fixed assets, liabilities, owner's capital and overall financial position.</p>
+<details>
+<summary>View Report Highlights ↓</summary>
+<div class="portfolio-preview">
+<table>
+<tr><td>Cash in Hand</td><td>₹1,80,000</td></tr>
+<tr><td>Bank Balance</td><td>₹4,20,000</td></tr>
+<tr><td>Trade Receivables</td><td>₹2,50,000</td></tr>
+<tr><td>Total Assets</td><td>₹14,50,000</td></tr>
+<tr><td>Liabilities & Equity</td><td>₹14,50,000</td></tr>
+</table>
+</div>
+</details>
+<a class="portfolio-download" href="FINASTRA_Portfolio_Sample_Reports.xlsx" download>Download Excel Sample ↓</a>
+</div>
+
+<div class="portfolio-card">
+<div class="portfolio-icon">📈</div>
+<div class="portfolio-label">EXCEL REPORT SAMPLE</div>
+<h3>Monthly MIS Report</h3>
+<p>Management reporting with financial KPIs, revenue, profitability, cash and bank balances, outstanding amounts and action points.</p>
+<details>
+<summary>View Report Highlights ↓</summary>
+<div class="portfolio-preview">
+<table>
+<tr><td>Total Revenue</td><td>₹8,50,000</td></tr>
+<tr><td>Gross Profit Margin</td><td>50.0%</td></tr>
+<tr><td>Net Profit Margin</td><td>24.7%</td></tr>
+<tr><td>Cash + Bank</td><td>₹6,00,000</td></tr>
+<tr><td>Trade Payables</td><td>₹1,60,000</td></tr>
+</table>
+</div>
+</details>
+<a class="portfolio-download" href="FINASTRA_Portfolio_Sample_Reports.xlsx" download>Download Excel Sample ↓</a>
+</div>
+
+</div>
+
+<div class="portfolio-note">
+<strong>Important Disclaimer:</strong> All reports and figures displayed are illustrative samples created for demonstration purposes only. They do not represent actual client financial information or audited statements. The downloadable workbook contains P&L Statement, Balance Sheet, Monthly MIS and Read Me sheets.
+</div>
+</div>
+</section>
+
 <section class="section pricing-section" id="pricing">
 <div class="container">
+<div class="section-title">
+<span class="eyebrow">TRANSPARENT PRICING</span>
+<h2>Monthly Accounting Packages</h2>
+<p>Choose the right accounting support for your business.</p>
+</div>
+<div class="packages">
 
-    <div class="section-title">
-        <span class="eyebrow">TRANSPARENT PRICING</span>
-        <h2>Monthly Accounting Packages</h2>
-        <p>Choose the right accounting support for your business.</p>
-    </div>
+<div class="package">
+<h3>Basic</h3><p class="subtitle">For Small Businesses</p>
+<div class="price">₹2,999 <small>/ month onwards</small></div><hr>
+<ul>
+<li><strong>Up to 100 Transactions per Month</strong></li>
+<li>Sales & Purchase Entries</li>
+<li>Expense Booking</li>
+<li>Cash & Bank Ledger</li>
+<li>Bank Reconciliation</li>
+<li>Ledger Maintenance</li>
+<li>Monthly Accounting Summary</li>
+</ul>
+<a class="btn btn-green" href="https://api.whatsapp.com/send/?phone=919871860180&text=Hello%2C%20I%20am%20interested%20in%20the%20Basic%20Accounting%20Package." target="_blank" rel="noopener">Choose Basic</a>
+</div>
 
-    <div class="packages">
+<div class="package featured">
+<span class="popular">MOST POPULAR</span>
+<h3>Standard</h3><p class="subtitle">For Growing Businesses</p>
+<div class="price">₹4,999 <small>/ month onwards</small></div><hr>
+<ul>
+<li><strong>Up to 300 Transactions per Month</strong></li>
+<li>All Basic Package Services</li>
+<li>Debtors & Creditors Reconciliation</li>
+<li>GST Data Preparation</li>
+<li>TDS Working</li>
+<li>Payroll Processing</li>
+<li>Monthly Profit & Loss Report</li>
+</ul>
+<a class="btn btn-green" href="https://api.whatsapp.com/send/?phone=919871860180&text=Hello%2C%20I%20am%20interested%20in%20the%20Standard%20Accounting%20Package." target="_blank" rel="noopener">Choose Standard</a>
+</div>
 
-        <!-- BASIC -->
-        <div class="package">
-            <h3>Basic</h3>
-            <p class="subtitle">For Small Businesses</p>
+<div class="package">
+<h3>Premium</h3><p class="subtitle">For Established Businesses</p>
+<div class="price">₹7,999 <small>/ month onwards</small></div><hr>
+<ul>
+<li><strong>Up to 600 Transactions per Month</strong></li>
+<li>All Standard Package Services</li>
+<li>Complete Accounts Management</li>
+<li>GST & TDS Reconciliation</li>
+<li>MIS & Financial Reports</li>
+<li>Outstanding Reports</li>
+<li>Monthly Financial Review</li>
+<li>Management Reporting</li>
+</ul>
+<a class="btn btn-green" href="https://api.whatsapp.com/send/?phone=919871860180&text=Hello%2C%20I%20am%20interested%20in%20the%20Premium%20Accounting%20Package." target="_blank" rel="noopener">Choose Premium</a>
+</div>
 
-            <div class="price">₹2,999 <small>/ month onwards</small></div>
-
-            <hr>
-
-            <ul>
-                <li><strong>Up to 100 Transactions per Month</strong></li>
-                <li>Sales & Purchase Entries</li>
-                <li>Expense Booking</li>
-                <li>Cash & Bank Ledger</li>
-                <li>Bank Reconciliation</li>
-                <li>Ledger Maintenance</li>
-                <li>Monthly Accounting Summary</li>
-            </ul>
-
-            <a class="btn btn-green"
-               href="https://api.whatsapp.com/send/?phone=919871860180&text=Hello%2C%20I%20am%20interested%20in%20the%20Basic%20Accounting%20Package."
-               target="_blank" rel="noopener">Choose Basic</a>
-        </div>
-
-        <!-- STANDARD -->
-        <div class="package featured">
-            <span class="popular">MOST POPULAR</span>
-
-            <h3>Standard</h3>
-            <p class="subtitle">For Growing Businesses</p>
-
-            <div class="price">₹4,999 <small>/ month onwards</small></div>
-
-            <hr>
-
-            <ul>
-                <li><strong>Up to 300 Transactions per Month</strong></li>
-                <li>All Basic Package Services</li>
-                <li>Debtors & Creditors Reconciliation</li>
-                <li>GST Data Preparation</li>
-                <li>TDS Working</li>
-                <li>Payroll Processing</li>
-                <li>Monthly Profit & Loss Report</li>
-            </ul>
-
-            <a class="btn btn-green"
-               href="https://api.whatsapp.com/send/?phone=919871860180&text=Hello%2C%20I%20am%20interested%20in%20the%20Standard%20Accounting%20Package."
-               target="_blank" rel="noopener">Choose Standard</a>
-        </div>
-
-        <!-- PREMIUM -->
-        <div class="package">
-            <h3>Premium</h3>
-            <p class="subtitle">For Established Businesses</p>
-
-            <div class="price">₹7,999 <small>/ month onwards</small></div>
-
-            <hr>
-
-            <ul>
-                <li><strong>Up to 600 Transactions per Month</strong></li>
-                <li>All Standard Package Services</li>
-                <li>Complete Accounts Management</li>
-                <li>GST & TDS Reconciliation</li>
-                <li>MIS & Financial Reports</li>
-                <li>Outstanding Reports</li>
-                <li>Monthly Financial Review</li>
-                <li>Management Reporting</li>
-            </ul>
-
-            <a class="btn btn-green"
-               href="https://api.whatsapp.com/send/?phone=919871860180&text=Hello%2C%20I%20am%20interested%20in%20the%20Premium%20Accounting%20Package."
-               target="_blank" rel="noopener">Choose Premium</a>
-        </div>
-
-    </div>
+</div>
 </div>
 </section>
 
-<!-- INDIVIDUAL RATE LIST -->
-<section class="section rate-section" id="rates">
+<section class="section" id="rates">
 <div class="container">
-
-    <div class="section-title">
-        <span class="eyebrow">INDIVIDUAL SERVICES</span>
-        <h2>Professional Service Pricing</h2>
-        <p>Transparent pricing designed to meet your business accounting needs.</p>
-    </div>
-
-    <div class="table-wrap">
-        <table class="rate-table">
-
-            <thead>
-                <tr>
-                    <th>Service Description</th>
-                    <th>Starting Price</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>Accounting & Bookkeeping</td>
-                    <td>₹1,200 / Month</td>
-                </tr>
-
-                <tr>
-                    <td>Bank Reconciliation</td>
-                    <td>₹1,200 / Month</td>
-                </tr>
-
-                <tr>
-                    <td>Payroll Processing</td>
-                    <td>₹1,200 / Month</td>
-                </tr>
-
-                <tr>
-                    <td>GST Data Preparation</td>
-                    <td>₹1,200 / Month</td>
-                </tr>
-
-                <tr>
-                    <td>TDS Working</td>
-                    <td>₹1,200 / Month</td>
-                </tr>
-
-                <tr>
-                    <td>Ledger Scrutiny</td>
-                    <td>₹2,000 / Month</td>
-                </tr>
-
-                <tr>
-                    <td>Backdated Accounting</td>
-                    <td>₹700 / Hour onwards</td>
-                </tr>
-            </tbody>
-
-        </table>
-    </div>
-
-    <div class="note">
-        <strong>Important Note:</strong>
-        All prices are starting prices and include the monthly transaction
-        limit mentioned in the selected package. Additional transactions
-        beyond the package limit may be charged separately. Pricing may
-        also vary depending on business size and scope of work. GST,
-        statutory filing fees and CA certification charges, wherever
-        applicable, are extra. Final quotation will be shared after
-        understanding the client's requirements.
-    </div>
-
-    <div style="text-align:center;margin-top:28px;">
-        <a href="https://api.whatsapp.com/send/?phone=919871860180&text=Hello%20FINASTRA%2C%20I%20want%20a%20custom%20quotation."
-           class="btn btn-green" target="_blank" rel="noopener">
-            Get Custom Quotation
-        </a>
-    </div>
-
+<div class="section-title">
+<span class="eyebrow">INDIVIDUAL SERVICES</span>
+<h2>Professional Service Pricing</h2>
+<p>Transparent pricing designed to meet your business accounting needs.</p>
+</div>
+<div class="table-wrap">
+<table class="rate-table">
+<thead><tr><th>Service Description</th><th>Starting Price</th></tr></thead>
+<tbody>
+<tr><td>Accounting & Bookkeeping</td><td>₹1,200 / Month</td></tr>
+<tr><td>Bank Reconciliation</td><td>₹1,200 / Month</td></tr>
+<tr><td>Payroll Processing</td><td>₹1,200 / Month</td></tr>
+<tr><td>GST Data Preparation</td><td>₹1,200 / Month</td></tr>
+<tr><td>TDS Working</td><td>₹1,200 / Month</td></tr>
+<tr><td>Ledger Scrutiny</td><td>₹2,000 / Month</td></tr>
+<tr><td>Backdated Accounting</td><td>₹700 / Hour onwards</td></tr>
+</tbody>
+</table>
+</div>
+<div class="note"><strong>Important Note:</strong> All prices are starting prices and include the monthly transaction limit mentioned in the selected package. Additional transactions beyond the package limit may be charged separately. GST, statutory filing fees and CA certification charges, wherever applicable, are extra. Final quotation will be shared after understanding the client's requirements.</div>
+<div style="text-align:center;margin-top:25px">
+<a href="https://api.whatsapp.com/send/?phone=919871860180&text=Hello%20FINASTRA%2C%20I%20want%20a%20custom%20quotation." class="btn btn-green" target="_blank" rel="noopener">Get Custom Quotation</a>
+</div>
 </div>
 </section>
 
-<!-- HOW WE WORK -->
 <section class="section process-section">
 <div class="container">
-
-    <div class="section-title">
-        <span class="eyebrow">SIMPLE PROCESS</span>
-        <h2>How We Work</h2>
-        <p>Getting started with FINASTRA is simple.</p>
-    </div>
-
-    <div class="process-grid">
-
-        <div class="process">
-            <div class="process-number">01</div>
-            <h3>Share Requirements</h3>
-            <p>Tell us about your business and accounting needs.</p>
-        </div>
-
-        <div class="process">
-            <div class="process-number">02</div>
-            <h3>Get a Quotation</h3>
-            <p>Receive a suitable service proposal and pricing.</p>
-        </div>
-
-        <div class="process">
-            <div class="process-number">03</div>
-            <h3>Start Services</h3>
-            <p>Share the required documents and begin the engagement.</p>
-        </div>
-
-        <div class="process">
-            <div class="process-number">04</div>
-            <h3>Regular Reporting</h3>
-            <p>Receive accounting updates and agreed reports.</p>
-        </div>
-
-    </div>
+<div class="section-title">
+<span class="eyebrow">SIMPLE PROCESS</span>
+<h2>How We Work</h2>
+<p>Getting started with FINASTRA is simple.</p>
+</div>
+<div class="process-grid">
+<div class="process"><div class="process-number">01</div><h3>Share Requirements</h3><p>Tell us about your business and accounting needs.</p></div>
+<div class="process"><div class="process-number">02</div><h3>Get a Quotation</h3><p>Receive a suitable service proposal and pricing.</p></div>
+<div class="process"><div class="process-number">03</div><h3>Start Services</h3><p>Share the required documents and begin the engagement.</p></div>
+<div class="process"><div class="process-number">04</div><h3>Regular Reporting</h3><p>Receive accounting updates and agreed reports.</p></div>
+</div>
 </div>
 </section>
 
-<!-- CONTACT -->
 <section class="contact" id="contact">
-
-    <div class="container">
-
-        <span class="tag">LET'S CONNECT</span>
-
-        <h2>Let's Grow Your Business Together</h2>
-
-        <p>
-            Looking for reliable accounting and financial support?
-            Contact FINASTRA for a customised solution.
-        </p>
-
-        <div class="contact-details">
-            <div>📞 +91 98718 60180</div>
-            <div>✉ badalsharma0180@gmail.com</div>
-            <div>📍 Delhi NCR, India</div>
-        </div>
-
-        <a href="tel:+919871860180" class="btn btn-gold">
-            Call Now
-        </a>
-
-        <a href="https://api.whatsapp.com/send/?phone=919871860180&text=Hello%20FINASTRA%2C%20I%20want%20to%20discuss%20accounting%20services."
-           class="btn btn-green" target="_blank" rel="noopener">
-            WhatsApp Us
-        </a>
-
-        <a href="mailto:badalsharma0180@gmail.com"
-           class="btn btn-outline">
-            Send Email
-        </a>
-
-    </div>
+<div class="container">
+<span class="tag">LET'S CONNECT</span>
+<h2>Let's Grow Your Business Together</h2>
+<p>Looking for reliable accounting and financial support? Contact FINASTRA for a customised solution.</p>
+<div class="contact-details">
+<div>📞 +91 98718 60180</div>
+<div>✉ badalsharma0180@gmail.com</div>
+<div>📍 Delhi NCR, India</div>
+</div>
+<a href="tel:+919871860180" class="btn btn-gold">Call Now</a>
+<a href="https://api.whatsapp.com/send/?phone=919871860180&text=Hello%20FINASTRA%2C%20I%20want%20to%20discuss%20accounting%20services." class="btn btn-green" target="_blank" rel="noopener">WhatsApp Us</a>
+<a href="mailto:badalsharma0180@gmail.com" class="btn btn-outline">Send Email</a>
+</div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-
-    <div class="logo">FINA<span>STRA</span></div>
-
-    <p>Professional Accounting & Financial Solutions</p>
-
-    <p>Serving Businesses Across Delhi NCR</p>
-
-    <p style="margin-top:15px;">
-        © 2026 FINASTRA | Badal Sharma | All Rights Reserved
-    </p>
-
-    <p style="margin-top:8px;">
-        Accounting and compliance assistance subject to applicable
-        professional and statutory requirements.
-    </p>
-
+<div class="logo">FINA<span>STRA</span></div>
+<p>Professional Accounting & Financial Solutions</p>
+<p>Serving Businesses Across Delhi NCR</p>
+<p style="margin-top:15px">© 2026 FINASTRA | Badal Sharma | All Rights Reserved</p>
+<p style="margin-top:8px">Accounting and compliance assistance subject to applicable professional and statutory requirements.</p>
 </footer>
 
-<!-- FLOATING WHATSAPP BUTTON -->
-<a class="whatsapp-float"
-   href="https://api.whatsapp.com/send/?phone=919871860180&text=Hello%20FINASTRA%2C%20I%20need%20accounting%20services."
-   target="_blank" rel="noopener">
-   WhatsApp ✆
-</a>
+<a class="whatsapp-float" href="https://api.whatsapp.com/send/?phone=919871860180&text=Hello%20FINASTRA%2C%20I%20need%20accounting%20services." target="_blank" rel="noopener">WhatsApp ✆</a>
 
 </body>
 </html>
