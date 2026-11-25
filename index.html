@@ -1,96 +1,777 @@
 ```html
 
-<!-- PRICING SECTION START -->
-<section class="services" id="pricing">
-    <div class="container">
-        <h1>Our Pricing & Packages</h1>
-        <p>Affordable Accounting Solutions for Businesses</p>
 
-        <div class="services-grid">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            <!-- BASIC PACKAGE -->
-            <div class="service-card">
-                <h3>Basic Package</h3>
-                <h2>₹2,999 <small>/Month</small></h2>
-                <p>Suitable for Small Businesses</p>
-                <hr>
-                <p>✔ Sales & Purchase Entries</p>
-                <p>✔ Expense Booking</p>
-                <p>✔ Bank Reconciliation</p>
-                <p>✔ Cash & Bank Ledger</p>
-                <p>✔ Monthly Accounting Summary</p>
-                <p>✔ Ledger Maintenance</p>
-                <a href="https://api.whatsapp.com/send/?phone=919871860180&text=I%20am%20interested%20in%20Basic%20Accounting%20Package"
-                   class="btn">Get Started</a>
-            </div>
+<title>FINASTRA | Badal Sharma - Accounting & Tax Consultant</title>
 
-            <!-- STANDARD PACKAGE -->
-            <div class="service-card">
-                <h3>Standard Package</h3>
-                <h2>₹4,999 <small>/Month</small></h2>
-                <p>Suitable for Growing Businesses</p>
-                <hr>
-                <p>✔ All Basic Package Services</p>
-                <p>✔ Debtors & Creditors Reconciliation</p>
-                <p>✔ GST Data Preparation</p>
-                <p>✔ TDS Working</p>
-                <p>✔ Payroll Processing</p>
-                <p>✔ Monthly Profit & Loss Report</p>
-                <a href="https://api.whatsapp.com/send/?phone=919871860180&text=I%20am%20interested%20in%20Standard%20Accounting%20Package"
-                   class="btn">Get Started</a>
-            </div>
+<meta name="description" content="FINASTRA provides professional accounting, bookkeeping, GST, taxation, payroll and financial management services in Delhi NCR.">
 
-            <!-- PREMIUM PACKAGE -->
-            <div class="service-card">
-                <h3>Premium Package</h3>
-                <h2>₹7,999 <small>/Month</small></h2>
-                <p>Suitable for Established Businesses</p>
-                <hr>
-                <p>✔ All Standard Package Services</p>
-                <p>✔ Complete Accounts Management</p>
-                <p>✔ GST & TDS Reconciliation</p>
-                <p>✔ MIS & Financial Reports</p>
-                <p>✔ Outstanding Reports</p>
-                <p>✔ Monthly Financial Review</p>
-                <p>✔ Management Reporting</p>
-                <a href="https://api.whatsapp.com/send/?phone=919871860180&text=I%20am%20interested%20in%20Premium%20Accounting%20Package"
-                   class="btn">Get Started</a>
-            </div>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        </div>
+html {
+    scroll-behavior: smooth;
+}
 
-        <h2 style="margin-top:45px;">Individual Service Rate List</h2>
+body {
+    font-family: Arial, sans-serif;
+    color: #263449;
+    background: #f7f9fc;
+    line-height: 1.7;
+}
 
-        <div class="service-card"
-             style="width:auto;max-width:700px;margin:20px auto;text-align:left;">
+:root {
+    --navy: #102c50;
+    --blue: #174b83;
+    --gold: #d6ad55;
+    --light: #f1f5fa;
+    --green: #20a66b;
+}
 
-            <p>Accounting & Bookkeeping – Starting ₹1,999/month</p>
-            <hr>
-            <p>Bank Reconciliation – Starting ₹999/month</p>
-            <hr>
-            <p>Payroll Processing – Starting ₹999/month</p>
-            <hr>
-            <p>GST Data Preparation – Starting ₹999/month</p>
-            <hr>
-            <p>TDS Working – Starting ₹999/month</p>
-            <hr>
-            <p>Ledger Scrutiny – Starting ₹1,499/month</p>
-            <hr>
-            <p>Backdated Accounting – ₹400/hour onwards</p>
-        </div>
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
 
-        <p style="font-size:13px;color:#555;">
-            Note: All prices are starting prices. Final charges depend
-            on transaction volume, number of employees and scope of work.
-            GST, statutory filing fees and CA certification charges are extra.
+header {
+    background: var(--navy);
+    color: white;
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.hero {
+    background: linear-gradient(120deg, #102c50, #1d568e);
+    color: white;
+    padding: 75px 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.hero-text .tag {
+    color: var(--gold);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 43px;
+    line-height: 1.25;
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero p {
+    color: #e2eaf4;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.profile-box {
+    text-align: center;
+    flex: 0 0 300px;
+}
+
+.profile-box img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid var(--gold);
+    box-shadow: 0 10px 35px rgba(0,0,0,.3);
+}
+
+.profile-box h3 {
+    margin-top: 15px;
+    font-size: 23px;
+}
+
+.profile-box p {
+    font-size: 14px;
+    color: #e2eaf4;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--gold);
+    color: #102c50;
+    padding: 12px 23px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 7px 5px 7px 0;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+.btn-green {
+    background: var(--green);
+    color: white;
+}
+
+.section {
+    padding: 70px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    color: var(--navy);
+    font-size: 32px;
+}
+
+.section-title p {
+    color: #69788c;
+    margin-top: 8px;
+}
+
+.about-card {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 22px rgba(0,0,0,.06);
+    text-align: center;
+}
+
+.about-card h3 {
+    color: var(--blue);
+    margin-bottom: 15px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.stat {
+    background: var(--light);
+    padding: 20px;
+    border-radius: 9px;
+}
+
+.stat h3 {
+    color: var(--blue);
+    font-size: 26px;
+}
+
+.services {
+    background: #eef3f9;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+}
+
+.service-card {
+    background: white;
+    padding: 27px;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0,0,0,.05);
+    border-top: 4px solid var(--gold);
+    transition: .3s;
+}
+
+.service-card:hover,
+.package:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #69788c;
+    font-size: 14px;
+}
+
+.pricing {
+    background: white;
+}
+
+.packages {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+    align-items: stretch;
+}
+
+.package {
+    background: white;
+    border: 1px solid #dfe6ef;
+    border-radius: 12px;
+    padding: 30px 23px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+    transition: .3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.package.featured {
+    border: 2px solid var(--gold);
+    transform: scale(1.03);
+}
+
+.package h3 {
+    color: var(--navy);
+    font-size: 23px;
+}
+
+.package .subtitle {
+    color: #758398;
+    font-size: 13px;
+    margin: 5px 0 15px;
+}
+
+.price {
+    font-size: 34px;
+    font-weight: bold;
+    color: var(--blue);
+    margin: 8px 0;
+}
+
+.price small {
+    font-size: 13px;
+    font-weight: normal;
+    color: #778397;
+}
+
+.package hr {
+    border: none;
+    border-top: 1px solid #e6eaf0;
+    margin: 18px 0;
+}
+
+.package ul {
+    list-style: none;
+    flex: 1;
+}
+
+.package li {
+    padding: 7px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f2f5;
+}
+
+.package li::before {
+    content: "✓ ";
+    color: var(--green);
+    font-weight: bold;
+}
+
+.package .btn {
+    text-align: center;
+    margin-top: 22px;
+}
+
+.popular {
+    background: var(--gold);
+    color: var(--navy);
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    align-self: flex-start;
+}
+
+.rate-list {
+    background: #f1f5fa;
+}
+
+.rate-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0,0,0,.05);
+}
+
+.rate-table th {
+    background: var(--navy);
+    color: white;
+    padding: 17px;
+    text-align: left;
+}
+
+.rate-table td {
+    padding: 15px 17px;
+    border-bottom: 1px solid #e6ebf1;
+}
+
+.rate-table tr:last-child td {
+    border-bottom: none;
+}
+
+.rate-table td:last-child {
+    color: var(--blue);
+    font-weight: bold;
+}
+
+.note {
+    background: #fff9e9;
+    border-left: 4px solid var(--gold);
+    padding: 18px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 13px;
+    color: #5c6470;
+}
+
+.contact {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+    padding: 65px 15px;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.contact p {
+    color: #dce5f1;
+    margin-bottom: 15px;
+}
+
+footer {
+    background: #091e38;
+    color: white;
+    padding: 25px 10px;
+    text-align: center;
+    font-size: 13px;
+}
+
+@media(max-width:850px) {
+    .grid, .packages {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .package.featured {
+        transform: none;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+}
+
+@media(max-width:600px) {
+    .nav {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 5px 8px;
+        display: inline-block;
+    }
+
+    .hero {
+        padding: 45px 0;
+    }
+
+    .hero-content {
+        text-align: center;
+        flex-direction: column-reverse;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .profile-box {
+        flex-basis: auto;
+    }
+
+    .profile-box img {
+        width: 210px;
+        height: 210px;
+    }
+
+    .grid, .packages, .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 48px 0;
+    }
+
+    .section-title h2 {
+        font-size: 26px;
+    }
+
+    .about-card {
+        padding: 23px;
+    }
+
+    .rate-table th, .rate-table td {
+        padding: 11px 8px;
+        font-size: 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+    <div class="logo">FINA<span>STRA</span></div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Packages</a>
+        <a href="#rates">Rate List</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</div>
+</header>
+
+<!-- HERO / PROFILE -->
+<section class="hero" id="home">
+<div class="container hero-content">
+
+    <div class="hero-text">
+        <div class="tag">PROFESSIONAL ACCOUNTING SERVICES</div>
+        <h1>Reliable Accounting & <span>Financial Solutions</span></h1>
+        <p>
+            Your Trusted Partner for Accounting, GST, Income Tax,
+            Payroll and Business Compliance Services.
+        </p>
+        <a href="#pricing" class="btn">View Our Packages</a>
+        <a href="https://api.whatsapp.com/send/?phone=919871860180"
+           class="btn btn-green">Contact on WhatsApp</a>
+    </div>
+
+    <div class="profile-box">
+        <img
+        src="https://raw.githubusercontent.com/badalsharma0180-droid/Finastra/677c0b75a33fd06ee9fe5b16e6da82df26a1aa50/Badal.png"
+        alt="Badal Sharma">
+        <h3>Badal Sharma</h3>
+        <p>Senior Accountant & Financial Consultant</p>
+    </div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+<div class="container">
+    <div class="section-title">
+        <h2>About Me</h2>
+        <p>Professional Experience. Reliable Financial Support.</p>
+    </div>
+
+    <div class="about-card">
+        <h3>Badal Sharma | FINASTRA</h3>
+        <p>
+            Badal Sharma is a Senior Accountant and Financial Consultant
+            with over 8 years of experience in accounting, taxation,
+            compliance and financial management. He specializes in
+            financial reporting, GST, budgeting, cash flow planning
+            and business advisory for startups and SMEs. With strong
+            expertise in Excel and accounting systems, he delivers
+            accurate, transparent and growth-focused financial solutions
+            tailored to client needs.
         </p>
 
-        <a href="https://api.whatsapp.com/send/?phone=919871860180&text=I%20want%20a%20custom%20accounting%20quotation"
-           class="btn">Get Custom Quotation</a>
+        <div class="stats">
+            <div class="stat">
+                <h3>8+</h3>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat">
+                <h3>Delhi NCR</h3>
+                <p>Service Area</p>
+            </div>
+            <div class="stat">
+                <h3>SMEs</h3>
+                <p>Business Focus</p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services" id="services">
+<div class="container">
+    <div class="section-title">
+        <h2>Our Services</h2>
+        <p>Complete Financial & Accounting Support Under One Roof</p>
+    </div>
+
+    <div class="grid">
+        <div class="service-card">
+            <h3>Accounting & Bookkeeping</h3>
+            <p>Sales, purchase, expenses, ledger maintenance,
+            bank reconciliation and monthly accounting.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>GST Services</h3>
+            <p>GST registration assistance, data preparation,
+            reconciliation and return filing support.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Income Tax Services</h3>
+            <p>Income tax return preparation and filing assistance
+            for individuals and businesses.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Payroll Management</h3>
+            <p>Salary processing, payroll reports, attendance
+            coordination and statutory working.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>TDS & Compliance</h3>
+            <p>TDS calculation, working, reconciliation and
+            compliance assistance.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>MIS & Financial Reporting</h3>
+            <p>Profit and loss reports, outstanding reports,
+            cash flow and management information reports.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- PACKAGES -->
+<section class="section pricing" id="pricing">
+<div class="container">
+    <div class="section-title">
+        <h2>Monthly Accounting Packages</h2>
+        <p>Transparent & Affordable Pricing for Your Business</p>
+    </div>
+
+    <div class="packages">
+
+        <div class="package">
+            <h3>Basic</h3>
+            <p class="subtitle">For Small Businesses</p>
+            <div class="price">₹2,999 <small>/ month onwards</small></div>
+            <hr>
+            <ul>
+                <li>Sales & Purchase Entries</li>
+                <li>Expense Booking</li>
+                <li>Cash & Bank Ledger</li>
+                <li>Bank Reconciliation</li>
+                <li>Ledger Maintenance</li>
+                <li>Monthly Accounting Summary</li>
+            </ul>
+            <a href="https://api.whatsapp.com/send/?phone=919871860180&text=I%20am%20interested%20in%20Basic%20Package"
+               class="btn btn-green">Choose Basic</a>
+        </div>
+
+        <div class="package featured">
+            <span class="popular">MOST POPULAR</span>
+            <h3>Standard</h3>
+            <p class="subtitle">For Growing Businesses</p>
+            <div class="price">₹4,999 <small>/ month onwards</small></div>
+            <hr>
+            <ul>
+                <li>All Basic Package Services</li>
+                <li>Debtors & Creditors Reconciliation</li>
+                <li>GST Data Preparation</li>
+                <li>TDS Working</li>
+                <li>Payroll Processing</li>
+                <li>Monthly Profit & Loss Report</li>
+            </ul>
+            <a href="https://api.whatsapp.com/send/?phone=919871860180&text=I%20am%20interested%20in%20Standard%20Package"
+               class="btn btn-green">Choose Standard</a>
+        </div>
+
+        <div class="package">
+            <h3>Premium</h3>
+            <p class="subtitle">For Established Businesses</p>
+            <div class="price">₹7,999 <small>/ month onwards</small></div>
+            <hr>
+            <ul>
+                <li>All Standard Package Services</li>
+                <li>Complete Accounts Management</li>
+                <li>GST & TDS Reconciliation</li>
+                <li>MIS & Financial Reports</li>
+                <li>Outstanding Reports</li>
+                <li>Monthly Financial Review</li>
+                <li>Management Reporting</li>
+            </ul>
+            <a href="https://api.whatsapp.com/send/?phone=919871860180&text=I%20am%20interested%20in%20Premium%20Package"
+               class="btn btn-green">Choose Premium</a>
+        </div>
 
     </div>
+</div>
 </section>
-<!-- PRICING SECTION END -->
+
+<!-- INDIVIDUAL RATE LIST -->
+<section class="section rate-list" id="rates">
+<div class="container">
+    <div class="section-title">
+        <h2>Individual Service Rate List</h2>
+        <p>Choose Only the Services You Need</p>
+    </div>
+
+    <table class="rate-table">
+        <thead>
+            <tr>
+                <th>Service</th>
+                <th>Starting Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Accounting & Bookkeeping</td>
+                <td>₹1,999 / Month</td>
+            </tr>
+            <tr>
+                <td>Bank Reconciliation</td>
+                <td>₹999 / Month</td>
+            </tr>
+            <tr>
+                <td>Payroll Processing</td>
+                <td>₹999 / Month</td>
+            </tr>
+            <tr>
+                <td>GST Data Preparation</td>
+                <td>₹999 / Month</td>
+            </tr>
+            <tr>
+                <td>TDS Working</td>
+                <td>₹999 / Month</td>
+            </tr>
+            <tr>
+                <td>Ledger Scrutiny</td>
+                <td>₹1,499 / Month</td>
+            </tr>
+            <tr>
+                <td>Backdated Accounting</td>
+                <td>₹400 / Hour onwards</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="note">
+        <strong>Important Note:</strong> All prices mentioned above are
+        starting prices and may vary depending on transaction volume,
+        number of employees, business size and scope of work.
+        GST, statutory filing fees and CA certification charges,
+        wherever applicable, are extra. Final quotation will be
+        shared after understanding the client's requirements.
+    </div>
+
+    <div style="text-align:center;margin-top:30px;">
+        <a href="https://api.whatsapp.com/send/?phone=919871860180&text=I%20want%20a%20custom%20accounting%20quotation"
+           class="btn btn-green">Get Custom Quotation</a>
+    </div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <h2>Let's Work Together</h2>
+    <p>Looking for reliable accounting and financial support?</p>
+    <p>Get in touch with FINASTRA today.</p>
+
+    <a href="tel:+919871860180" class="btn">Call Now</a>
+
+    <a href="https://api.whatsapp.com/send/?phone=919871860180"
+       class="btn btn-green">WhatsApp</a>
+
+    <a href="mailto:badalsharma0180@gmail.com" class="btn">
+       Email Us
+    </a>
+
+    <p style="margin-top:20px;">
+        Service Area: Delhi NCR
+    </p>
+</section>
+
+<footer>
+    <div class="logo">FINA<span>STRA</span></div>
+    <p>Professional Accounting & Financial Solutions</p>
+    <p>© 2026 FINASTRA | Badal Sharma | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
 
 </footer>
 
